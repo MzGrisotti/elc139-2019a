@@ -19,7 +19,6 @@ Nome: Matheus Grisotti
 | Desempenho Linpack                                        |             13,554.6 TFlop/s          |     159.7 GFlop/s           |
 
 ### Referências
-- Autor (nome de pessoa ou instituição). Título. URL.
-- Autor (nome de pessoa ou instituição). Título. URL.
-- Autor (nome de pessoa ou instituição). Título. URL.
-- ...
+- Top 500. Oakforest-PACS - PRIMERGY CX1640 M1, Intel Xeon Phi 7250 68C 1.4GHz, Intel Omni-Path https://www.top500.org/system/178932
+- Processador Intel® Core™ i7-7700K. https://ark.intel.com/content/www/br/pt/ark/products/97129/intel-core-i7-7700k-processor-8m-cache-up-to-4-50-ghz.html
+- Intel. Intel® LINPACK Benchmark Download https://software.intel.com/en-us/articles/intel-linpack-benchmark-download-license-agreement
