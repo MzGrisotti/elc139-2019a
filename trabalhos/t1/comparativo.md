@@ -3,20 +3,20 @@
 TOP500 & me: Comparativo de Arquiteturas Paralelas
 --------------------------------------------------
 
-Nome: < preencha seu nome aqui >
+Nome: Matheus Grisotti
 
 | Característica                                            | Computador no TOP500  | Meu computador  |
 | --------------------------------------------------------- | --------------------- | --------------- |
-| Nome/Título                                               |                       |                 |
-| Imagem (foto, diagrama, screenshot, etc.)                 | Substitua-me. <img src="http://www.top500.org/static//images/Top500_logo.png" width="48"> | Substitua-me. <img src="http://www.top500.org/static//images/Top500_logo.png" width="48">|
-| Classificação de Flynn                                    |                       |                 |
-| Memória: compartilhada, distribuída ou ambas?             |                       |                 |
-| Número total de núcleos de processamento                  |                       |                 |
-| Fabricante e modelo do(s) processador(es)                 |                       |                 |
-| Frequência do(s) processador(es)                          |                       |                 |
-| Memória total                                             |                       |                 |
-| Tipo(s) de interconexão entre os núcleos/processadores    |                       |                 |
-| Desempenho Linpack                                        |                       |                 |
+| Nome/Título                                               |       Oakforest-PACS - PRIMERGY CX1640 M1                |    Grisotti's Computer             |
+| Imagem (foto, diagrama, screenshot, etc.)                 | <img src="https://insidehpc.com/wp-content/uploads/2016/12/6-oakforest-pacs.jpg" width="180"> | <img src="https://cdn.pcpartpicker.com/static/forever/images/userbuild/192682.d73ea7a85e8ce3d846a102aa29f4a36f.1600.jpg" width="180">|
+| Classificação de Flynn                                    |    MIMD                   |     MIMD            |
+| Memória: compartilhada, distribuída ou ambas?             |             ambas          |        ambas         |
+| Número total de núcleos de processamento                  |         	556,104              |        8         |
+| Fabricante e modelo do(s) processador(es)                 |        	Intel Xeon Phi 7250               |    Intel Core i7 7700k             |
+| Frequência do(s) processador(es)                          |        1.4GHz                |      4.5GHz           |
+| Memória total                                             |    919,296 GB                   |  16 GB               |
+| Tipo(s) de interconexão entre os núcleos/processadores    |           Intel Omni-Path            |     Quick Patch Interconnect            |
+| Desempenho Linpack                                        |             13,554.6 TFlop/s          |     159.7 GFlop/s           |
 
 ### Referências
 - Autor (nome de pessoa ou instituição). Título. URL.
