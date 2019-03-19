@@ -8,7 +8,7 @@ Nome: Matheus Grisotti
 | Característica                                            | Computador no TOP500  | Meu computador  |
 | --------------------------------------------------------- | --------------------- | --------------- |
 | Nome/Título                                               |       Oakforest-PACS - PRIMERGY CX1640 M1                |    Grisotti's Computer             |
-| Imagem (foto, diagrama, screenshot, etc.)                 | <img src="https://insidehpc.com/wp-content/uploads/2016/12/6-oakforest-pacs.jpg" width="180"> | <img src="https://imgur.com/0p1SiNw" width="180">|
+| Imagem (foto, diagrama, screenshot, etc.)                 | <img src="https://insidehpc.com/wp-content/uploads/2016/12/6-oakforest-pacs.jpg" width="180"> | <img src="https://i.imgur.com/0p1SiNw.jpg" width="180">|
 | Classificação de Flynn                                    |    MIMD                   |     MIMD            |
 | Memória: compartilhada, distribuída ou ambas?             |             ambas          |        ambas         |
 | Número total de núcleos de processamento                  |         	556,104              |        4         |
