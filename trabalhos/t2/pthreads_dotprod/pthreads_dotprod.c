@@ -129,9 +129,8 @@ int main(int argc, char **argv)
    end_time = wtime();
 
    // Mostra resultado e estatisticas da execucao
-   //printf("%f\n", dotdata.c);
-   //printf("%d thread(s), %ld usec\n", nthreads, (long) (end_time - start_time));
-   printf("%ld\n", (long) (end_time - start_time));
+   printf("%f\n", dotdata.c);
+   printf("%d thread(s), %ld usec\n", nthreads, (long) (end_time - start_time));
    fflush(stdout);
 
    free(dotdata.a);
