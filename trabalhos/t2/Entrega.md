@@ -96,7 +96,7 @@ O Speedup foi de 1,97 aproximadamente.
 
 #### 3. A aceleração  se sustenta para outros tamanhos de vetores, números de threads e repetições? Para responder a essa questão, você terá que realizar diversas execuções, variando o tamanho do problema (tamanho dos vetores e número de repetições) e o número de threads (1, 2, 4, 8..., dependendo do número de núcleos). Cada caso deve ser executado várias vezes, para depois calcular-se um tempo de processamento médio para cada caso. Atenção aos fatores que podem interferir na confiabilidade da medição: uso compartilhado do computador, tempos muito pequenos, etc.
 
-Como o código calcula a carga do programa de acordo com o tamanho do vetor, as repetições e o número de threads usadas, foi feito a medição do tempo em 3 cargas distintas, 2 bilhões, 500 milhões, e 100 milhões. Para isso foi ajustado o número de repetições a fim de manter a mesma carga para todas as execuções de diferentes números de threads. Foi feito 20 execuções para cada linha de cada tabela usando um programa [bash](/trabalhos/t2/pthreads_dotprod/Bash) que armazenava a saída do programa(o tempo de execução) em um arquivo txt, que por sua vez foi examinado para retirar números fora da curva e então usado para calcular a média de tempo com o auxílio deste [site](https://www.calculatorsoup.com/calculators/statistics/average.php).
+Como o código calcula a carga do programa de acordo com o tamanho do vetor, as repetições e o número de threads usadas, foi feito a medição do tempo em 3 cargas distintas, 2 bilhões, 500 milhões, e 100 milhões. Para isso foi ajustado o número de repetições a fim de manter a mesma carga para todas as execuções de diferentes números de threads. Foi feito 20 execuções para cada linha de cada tabela usando um programa [bash](/trabalhos/t2/pthreads_dotprod/Bash) que armazenava a saída do programa(o tempo de execução) em um arquivo txt, que por sua vez foi examinado para retirar números fora da curva e então usado para gerar o arquivo [results.csv](/trabalhos/t2/results.csv) e calcular as médias mostradas abaixo:
 
 #### Carga de 2.000.000.000
 
@@ -129,6 +129,8 @@ Como o código calcula a carga do programa de acordo com o tamanho do vetor, as 
 #### 4. Elabore um gráfico/tabela de aceleração a partir dos dados obtidos no exercício anterior.
 
 ![Speedup](/trabalhos/t2/graph.png)
+
+Como é possível observar, existe um salto de desempenho muito significativo de 1 para 2 threads, e de 2 para 4 threads, que se mantém ao longo de todos os testes nas diversas mudanças nos fatores(tamanho do vetor e repetições). Por outro lado, o pulo de 4 para 8 threads é menos constante, dependendo dos fatores e da carga do programa, nos testes de 2 bilhões(de carga) o salto foi muito pequeno, porém, onde houve um volume pequeno de dados e repetições o salto se mostrou significativo.
 
 5. Explique as diferenças entre [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) e [pthreads_dotprod2.c](pthreads_dotprod/pthreads_dotprod2.c). Com as linhas removidas, o programa está correto?
 
