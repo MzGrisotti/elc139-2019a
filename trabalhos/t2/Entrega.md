@@ -96,14 +96,34 @@ O Speedup foi de 1,97 aproximadamente.
 
 #### 3. A aceleração  se sustenta para outros tamanhos de vetores, números de threads e repetições? Para responder a essa questão, você terá que realizar diversas execuções, variando o tamanho do problema (tamanho dos vetores e número de repetições) e o número de threads (1, 2, 4, 8..., dependendo do número de núcleos). Cada caso deve ser executado várias vezes, para depois calcular-se um tempo de processamento médio para cada caso. Atenção aos fatores que podem interferir na confiabilidade da medição: uso compartilhado do computador, tempos muito pequenos, etc.
 
-| Vetor   | Repetições | Carga      | 1 Thread | 2 Threads | 4 Threads |
-|---------|------------|------------|----------|-----------|-----------|
-| 1000000 | 2000       | 2000000000 |          |           |           |
-| 1000000 | 1000       | 1000000000 |          |           |           |
-| 500000  | 2000       | 1000000000 |          |           |           |
-| 500000  | 1000       | 500000000  |          |           |           |
-| 250000  | 2000       | 500000000  |          |           |           |
-| 250000  | 1000       | 250000000  |          |           |           |
+Como o código calcula a carga do programa de acordo com o tamanho do vetor, as repetições e o número de threads usadas, foi feito a medição do tempo em 3 cargas distintas, 2 bilhões, 500 milhões, e 100 milhões. Para isso foi ajustado o número de repetições a fim de manter a mesma carga para todas as execuções de diferentes números de threads. Foi feito 20 execuções para cada linha de cada tabela usando um programa bash (inserir aqui o programa) que armazenava a saída do programa(o tempo de execução) em um arquivo txt, que por sua vez era usado para calcular a média de tempo com o auxílio deste site.
+
+#### Carga de 2.000.000.000
+
+| Modo      | Vetor   | Repetições | Tempo |
+|-----------|---------|------------|-------|
+| 1 Threads | 1000000 | 2000       |       |
+| 2 Threads | 1000000 | 1000       |       |
+| 4 Threads | 1000000 | 500        |       |
+| 8 Threads | 1000000 | 250        |       |
+
+#### Carga de 500.000.000
+
+| Modo      | Vetor  | Repetições | Tempo |
+|-----------|--------|------------|-------|
+| 1 Threads | 250000 | 2000       |       |
+| 2 Threads | 250000 | 1000       |       |
+| 4 Threads | 250000 | 500        |       |
+| 8 Threads | 250000 | 250        |       |
+
+#### Carga de 100.000.000
+
+| Modo      | Vetor | Repetições | Tempo |
+|-----------|-------|------------|-------|
+| 1 Threads | 50000 | 2000       |       |
+| 2 Threads | 50000 | 1000       |       |
+| 4 Threads | 50000 | 500        |       |
+| 8 Threads | 50000 | 250        |       |
 
 
 4. Elabore um gráfico/tabela de aceleração a partir dos dados obtidos no exercício anterior.
