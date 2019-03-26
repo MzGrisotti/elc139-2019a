@@ -128,6 +128,8 @@ Como o código calcula a carga do programa de acordo com o tamanho do vetor, as 
 
 #### 4. Elabore um gráfico/tabela de aceleração a partir dos dados obtidos no exercício anterior.
 
+![Speedup](//trabalhos/t2/graph.png)
+
 5. Explique as diferenças entre [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) e [pthreads_dotprod2.c](pthreads_dotprod/pthreads_dotprod2.c). Com as linhas removidas, o programa está correto?
 
 
