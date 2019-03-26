@@ -132,8 +132,9 @@ Como o código calcula a carga do programa de acordo com o tamanho do vetor, as 
 
 Como é possível observar, existe um salto de desempenho muito significativo de 1 para 2 threads, e de 2 para 4 threads, que se mantém ao longo de todos os testes nas diversas mudanças nos fatores(tamanho do vetor e repetições). Por outro lado, o pulo de 4 para 8 threads é menos constante, dependendo dos fatores e da carga do programa, nos testes de 2 bilhões(de carga) o salto foi muito pequeno, porém, onde houve um volume pequeno de dados e repetições o salto se mostrou significativo.
 
-5. Explique as diferenças entre [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) e [pthreads_dotprod2.c](pthreads_dotprod/pthreads_dotprod2.c). Com as linhas removidas, o programa está correto?
+#### 5. Explique as diferenças entre [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) e [pthreads_dotprod2.c](pthreads_dotprod/pthreads_dotprod2.c). Com as linhas removidas, o programa está correto?
 
+A diferença entre os dois arquivos é que o [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) implementa um semáforo mutex, enquanto o [pthreads_dotprod2.c](pthreads_dotprod/pthreads_dotprod2.c) não, isso implica em um possível erro devido ao acesso liberado a qualquer thread a qualquer hora à variável "dotdata.c", podendo gerar um erro na somatória final, pois se uma thread realizar a soma enquanto outra também está somando, a variável vai ser sobrescrita e somente a conta de uma das threads tera sido corretamente computada.
 
 ## Parte II: OpenMP
 
