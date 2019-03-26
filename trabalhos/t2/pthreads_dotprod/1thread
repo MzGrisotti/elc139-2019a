@@ -1,0 +1,10 @@
+#!/bin/bash
+seq 10 | xargs -Iz ./pthreads_dotprod 1 1000000 2000 > 1mill2000r.txt
+seq 10 | xargs -Iz ./pthreads_dotprod 1 1000000 1000 > 1mill1000r.txt
+seq 10 | xargs -Iz ./pthreads_dotprod 1 500000 2000 > 500mil2000r.txt
+seq 10 | xargs -Iz ./pthreads_dotprod 1 500000 1000 > 500mil1000r.txt
+seq 10 | xargs -Iz ./pthreads_dotprod 1 250000 2000 > 250mil2000r.txt
+seq 10 | xargs -Iz ./pthreads_dotprod 1 250000 1000 > 250mil1000r.txt
+
+
+
