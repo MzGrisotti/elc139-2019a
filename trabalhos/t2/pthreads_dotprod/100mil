@@ -1,8 +1,8 @@
 #!/bin/bash
-seq 10 | xargs -Iz ./pthreads_dotprod 1 1000000 2000 > 2bi_1thread.txt
-seq 10 | xargs -Iz ./pthreads_dotprod 2 1000000 1000 > 2bi_2thread.txt
-seq 10 | xargs -Iz ./pthreads_dotprod 4 1000000 500 > 2bi_4thread.txt
-seq 10 | xargs -Iz ./pthreads_dotprod 8 1000000 250 > 2bi_8thread.txt
+seq 20 | xargs -Iz ./pthreads_dotprod 1 50000 2000 > 100m_1thread.txt
+seq 20 | xargs -Iz ./pthreads_dotprod 2 50000 1000 > 100m_2thread.txt
+seq 20 | xargs -Iz ./pthreads_dotprod 4 50000 500 > 100m_4thread.txt
+seq 20 | xargs -Iz ./pthreads_dotprod 8 50000 250 > 100m_8thread.txt
 
 
 
