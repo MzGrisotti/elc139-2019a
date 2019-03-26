@@ -100,7 +100,7 @@ Como o código calcula a carga do programa de acordo com o tamanho do vetor, as 
 
 #### Carga de 2.000.000.000
 
-| Modo      | Vetor   | Repetições | Tempo |
+| Modo      | Vetor   | Repetições | Tempo(usec) |
 |-----------|---------|------------|-------|
 | 1 Threads | 1000000 | 2000       |  4180914     |
 | 2 Threads | 1000000 | 1000       |  2087966     |
@@ -109,7 +109,7 @@ Como o código calcula a carga do programa de acordo com o tamanho do vetor, as 
 
 #### Carga de 500.000.000
 
-| Modo      | Vetor  | Repetições | Tempo |
+| Modo      | Vetor  | Repetições | Tempo(usec)  |
 |-----------|--------|------------|-------|
 | 1 Threads | 250000 | 2000       | 1042402      |
 | 2 Threads | 250000 | 1000       |  517028     |
@@ -118,7 +118,7 @@ Como o código calcula a carga do programa de acordo com o tamanho do vetor, as 
 
 #### Carga de 100.000.000
 
-| Modo      | Vetor | Repetições | Tempo |
+| Modo      | Vetor | Repetições | Tempo(usec)  |
 |-----------|-------|------------|-------|
 | 1 Threads | 50000 | 2000       |   207277    |
 | 2 Threads | 50000 | 1000       |   103051    |
@@ -126,7 +126,7 @@ Como o código calcula a carga do programa de acordo com o tamanho do vetor, as 
 | 8 Threads | 50000 | 250        |    43148   |
 
 
-4. Elabore um gráfico/tabela de aceleração a partir dos dados obtidos no exercício anterior.
+#### 4. Elabore um gráfico/tabela de aceleração a partir dos dados obtidos no exercício anterior.
 
 5. Explique as diferenças entre [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) e [pthreads_dotprod2.c](pthreads_dotprod/pthreads_dotprod2.c). Com as linhas removidas, o programa está correto?
 
