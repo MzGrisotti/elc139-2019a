@@ -25,11 +25,11 @@ No seu repositório da disciplina, na pasta `trabalhos/t2`, você deverá entreg
 
 1. Explique como se encontram implementadas as 4 etapas de projeto: particionamento, comunicação, aglomeração, mapeamento (use trechos de código para ilustrar a explicação).
 
-####Particionamento
+#### Particionamento
 
-```
+
 O Particionamento é a quebra de um problema maior em problemas menores que permitam o programa ser executado em paralelo. Nesse trecho abaixo é calculado o vetor de carga baseado no número de threads usadas:
-```
+
 ```
 dotdata.a = (double *) malloc(wsize*nthreads*sizeof(double));
 fill(dotdata.a, wsize*nthreads, 0.01);
@@ -56,19 +56,19 @@ for (k = 0; k < dotdata.repeat; k++) {
    }
 }
 ```
-####Comunicação
-```
+#### Comunicação
+
 A parte de comunicação é onde as dependências são resolvidas, ou seja, é a parte crítica do código onde somente uma thread pode acessar por vez, e ela acontece no trecho abaixo:
-```
+
 ```
 pthread_mutex_lock (&mutexsum);
 dotdata.c += mysum;
 pthread_mutex_unlock (&mutexsum);
 ```
-####Aglomeração
-```
+#### Aglomeração
+
 A aglomeração é onde os resultados de cada thread são juntados em uma variável em comum, e é feita de um modo onde tenha o maior tempo possível de processamento e o menor possível de comunicação, para não manter a thread ociosa.
-```
+
 ```
 //processamento
 
@@ -85,10 +85,10 @@ pthread_mutex_lock (&mutexsum);
 dotdata.c += mysum;
 pthread_mutex_unlock (&mutexsum);
 ```
-####Mapeamento
-```
+#### Mapeamento
+
 É a distribuição das pequenas tarefas da etapa de particionamento para cada thread de forma balanceada, e está descrita no código abaixo:
-```
+
 ```
 threads = (pthread_t *) malloc(nthreads * sizeof(pthread_t));
 pthread_mutex_init(&mutexsum, NULL);
