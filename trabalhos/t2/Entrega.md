@@ -188,6 +188,10 @@ A tabela abaixo contém os fatores que foram usados para os testes, assim como o
 | 4 Threads | 50000 | 500        |   52095     |    62501   |
 | 8 Threads | 50000 | 250        |    42407     |    43148   |
 
+Abaixo está a comparação entre os speedups observados para ambos os programas.
+
+![Speedup_Comp](/trabalhos/t2/graph_2.png)
+
 ## Material de apoio
 
 - [POSIX Threads Programming](http://www.llnl.gov/computing/tutorials/pthreads/)  
