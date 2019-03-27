@@ -1,0 +1,8 @@
+#!/bin/bash
+seq 20 | xargs -Iz ./openmp_dotprod 1 250000 2000 > 500m_1thread.txt
+seq 20 | xargs -Iz ./openmp_dotprod 2 250000 1000 > 500m_2thread.txt
+seq 20 | xargs -Iz ./openmp_dotprod 4 250000 500 > 500m_4thread.txt
+seq 20 | xargs -Iz ./openmp_dotprod 8 250000 250 > 500m_8thread.txt
+
+
+
