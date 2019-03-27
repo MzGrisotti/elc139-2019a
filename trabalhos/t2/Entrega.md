@@ -159,6 +159,34 @@ A diferença entre os dois arquivos é que o [pthreads_dotprod.c](pthreads_dotpr
 
 2. Avalie o desempenho do programa em OpenMP, usando os mesmos dados/argumentos do programa com threads POSIX.
 
+A tabela abaixo contém os fatores que foram usados para os testes, assim como o seu tempo resultante em microssegundos do programa em OpenMP, e também foi adicionado uma coluna da tabela anterior que contém o tempo do programa de Pthreads para fins comparativos.
+
+#### Carga de 2.000.000.000
+
+| Modo      | Vetor   | Repetições | OpenMP | Pthread(usec) |
+|-----------|---------|------------|----------|--------------|
+| 1 Threads | 1000000 | 2000       |   4135093       |  4180914     |
+| 2 Threads | 1000000 | 1000       |   2103837       |  2087966     |
+| 4 Threads | 1000000 | 500        |    1110572      |  1099401     |
+| 8 Threads | 1000000 | 250        |    1031730      |   987926    |
+
+#### Carga de 500.000.000
+
+| Modo      | Vetor  | Repetições | OpenMP | Tempo(usec)  |
+|-----------|--------|------------|----------|---------|
+| 1 Threads | 250000 | 2000       |  1024650        |1042402      |
+| 2 Threads | 250000 | 1000       |   520031        | 517028     |
+| 4 Threads | 250000 | 500        |   266166        |  276977    |
+| 8 Threads | 250000 | 250        |    240441       |  220160    |
+
+#### Carga de 100.000.000
+
+| Modo      | Vetor | Repetições | OpenMP | Tempo(usec)  |
+|-----------|-------|------------|--------|-------------|
+| 1 Threads | 50000 | 2000       |  204532      |   207277    |
+| 2 Threads | 50000 | 1000       |   103369       |   103051    |
+| 4 Threads | 50000 | 500        |   52095     |    62501   |
+| 8 Threads | 50000 | 250        |    42407     |    43148   |
 
 ## Material de apoio
 
