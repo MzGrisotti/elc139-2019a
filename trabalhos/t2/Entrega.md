@@ -169,7 +169,6 @@ O programa [openmp_dotprod.c](openmp/openmp_dotprod.c) foi implementado baseado 
     id_t = dotdata.id;
     dotdata.id++;
   }
-
 ```
 
 E por fim a parte da soma foi declarada também como área crítica, que serve como o semáforo(mutex) do código com pthreads.
@@ -215,11 +214,3 @@ Abaixo está a comparação entre os speedups observados para ambos os programas
 ![Speedup_Comp](/trabalhos/t2/graph_2.png)
 
 Concluindo, não há muita diferença entre os dois programas, somente um leve ganho de desempenho do OpenMP com 1 thread pois no código [openmp_dotprod.c](openmp/openmp_dotprod.c) existe uma função a menos que no código [original](pthreads_dotprod/pthreads_dotprod.c) com pthread. As outras variações no tempo de execução são minimas e depende somente da aleatoriedade da situação do processador no momento da execução
-
-## Material de apoio
-
-- [POSIX Threads Programming](http://www.llnl.gov/computing/tutorials/pthreads/)  
-  Tutorial do Lawrence Livermore National Laboratory (LLNL) sobre Pthreads.
-
-- [Tutorial OpenMP](https://computing.llnl.gov/tutorials/openMP/)  
-  Tutorial do Lawrence Livermore National Laboratory (LLNL) sobre OpenMP.
