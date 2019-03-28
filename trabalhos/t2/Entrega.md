@@ -5,9 +5,11 @@
 
 ## Programação Paralela - ELC139-2019a
 
-**Nome** Matheus Zorzo Grisotti
+**Nome:** Matheus Zorzo Grisotti
 
 **Especificações**: [specs.txt](/trabalhos/t2/specs.txt)
+
+**Resultados**: [results.csv](/trabalhos/t2/results.csv)
 
 ### Questões Pthreads
 
