@@ -157,6 +157,24 @@ A diferença entre os dois arquivos é que o [pthreads_dotprod.c](pthreads_dotpr
 
 1. Implemente um programa equivalente a [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) usando OpenMP.
 
+O programa [openmp_dotprod.c](openmp/openmp_dotprod.c) foi implementado baseado no [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c), e editado conforme a biblioteca OpenMP da a possibilidade. Foi retirada a função "void dotprod_threads()" que inicializava as threads e substituida por uma área crítica dentro da função "dotprod_threads()", que basicamente funciona como um id para diferenciar cada thread e então usar no calculo do offset para distribuir a carga.
+
+```
+#pragma omp critical
+  {
+    id_t = dotdata.id;
+    dotdata.id++;
+  }
+
+```
+
+E por fim a parte da soma foi declarada também como área crítica, que serve como o semáforo(mutex) do código com pthreads.
+```
+#pragma omp critical
+  {
+    dotdata.c += mysum;
+  }
+```
 2. Avalie o desempenho do programa em OpenMP, usando os mesmos dados/argumentos do programa com threads POSIX.
 
 A tabela abaixo contém os fatores que foram usados para os testes, assim como o seu tempo resultante em microssegundos do programa em OpenMP, e também foi adicionado uma coluna da tabela anterior que contém o tempo do programa de Pthreads para fins comparativos.
@@ -191,6 +209,8 @@ A tabela abaixo contém os fatores que foram usados para os testes, assim como o
 Abaixo está a comparação entre os speedups observados para ambos os programas.
 
 ![Speedup_Comp](/trabalhos/t2/graph_2.png)
+
+Concluindo, não há muita diferença entre os dois programas, somente um leve ganho de desempenho do OpenMP com 1 thread pois no código [openmp_dotprod.c](openmp/openmp_dotprod.c) existe uma função a menos que no código [original](pthreads_dotprod/pthreads_dotprod.c) com pthread. As outras variações no tempo de execução são minimas e depende somente da aleatoriedade da situação do processador no momento da execução
 
 ## Material de apoio
 

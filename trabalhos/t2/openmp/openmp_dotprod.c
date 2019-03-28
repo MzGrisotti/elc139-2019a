@@ -44,7 +44,6 @@ void dotprod_threads()
      int id_t;//parte que incrementa o numero da thread para o calculo do offset
      #pragma omp critical
      {
-       //printf("oi da thread %d, TID = :%d\n", dotdata.id, omp_get_thread_num());
        id_t = dotdata.id;
        dotdata.id++;
      }
@@ -56,7 +55,6 @@ void dotprod_threads()
      int end = start + wsize;
      double mysum;
      int i, k;
-     //printf("thread: %d tamanho: %d start: %d end: %d\n", id_t, wsize, start, end);
      for (k = 0; k < dotdata.repeat; k++) {
         mysum = 0.0;
         for (i = start; i < end ; i++)  {
