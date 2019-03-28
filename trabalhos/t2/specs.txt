@@ -1,0 +1,5 @@
+Sistema Operacional: Ubuntu 18.04
+Memória RAM: 16GB
+Processador: Intel(R) Core(TM) i7-7700k
+Frequência: 4.20GHz
+Núcleos: 4 (8 Threads)
