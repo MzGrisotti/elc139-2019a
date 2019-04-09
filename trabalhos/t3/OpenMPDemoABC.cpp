@@ -16,11 +16,10 @@ public:
   Vetor_Comp(int tam){
     size = tam;
     array = new char[size];
+    index = 0;
   }
   void Add_char(char c, int i){
-
     array[i] = c;
-
   }
   int Countchar(char c){
     return count(array, array+size, c);
@@ -30,10 +29,11 @@ public:
   }
   void PrintVector(){
     for(int i = 0; i < size; i++){
-      cout << array[i] << ' ';
+      cout << array[i];
     }
     cout << endl;
   }
+
 };
 
 class OpenMP_Funcions {
@@ -46,7 +46,7 @@ public:
   OpenMP_Funcions(int threads, int nT){
     nThreads = threads;
     Tam = nT;
-    chuncksize = Tam/nThreads;
+    chuncksize = Tam/4;
     array = new Vetor_Comp(Tam);
     array->FillVector();
   }
@@ -62,62 +62,81 @@ public:
     cout << endl << endl;
 
   }
+  void spendSomeTime() {
+     for (int i = 0; i < 10000; i++) {
+        for (int j = 0; j < 100; j++) {
+           // These loops shouldn't be removed by the compiler
+        }
+     }
+  }
   void static_with_chunk(){
-    #pragma omp parallel for shared(array) schedule(static, chuncksize)
+    array->FillVector();
+    #pragma omp parallel for schedule(static, chuncksize)
       for(int i = 0; i < Tam; i++){
         array->Add_char('A' + omp_get_thread_num(), i);
       }
   }
   void static_without_chunk(){
-    #pragma omp parallel for shared(array) schedule(static)
+    array->FillVector();
+    #pragma omp parallel for schedule(static)
       for(int i = 0; i < Tam; i++){
         array->Add_char('A' + omp_get_thread_num(), i);
       }
 
   }
   void dynamic_with_chunk(){
-    #pragma omp parallel for shared(array) schedule(dynamic, chuncksize)
+    array->FillVector();
+    #pragma omp parallel for schedule(dynamic, chuncksize)
       for(int i = 0; i < Tam; i++){
         array->Add_char('A' + omp_get_thread_num(), i);
       }
 
   }
   void dynamic_without_chunk(){
-    #pragma omp parallel for shared(array) schedule(dynamic)
+    array->FillVector();
+    #pragma omp parallel for schedule(dynamic)
       for(int i = 0; i < Tam; i++){
         array->Add_char('A' + omp_get_thread_num(), i);
       }
   }
   void guided_with_chunk(){
-    #pragma omp parallel for shared(array) schedule(guided, chuncksize)
+    array->FillVector();
+    #pragma omp parallel for schedule(guided, chuncksize)
       for(int i = 0; i < Tam; i++){
         array->Add_char('A' + omp_get_thread_num(), i);
       }
   }
   void guided_without_chunk(){
-    #pragma omp parallel for shared(array) schedule(guided)
+    array->FillVector();
+    #pragma omp parallel for schedule(guided)
       for(int i = 0; i < Tam; i++){
         array->Add_char('A' + omp_get_thread_num(), i);
       }
   }
   void sch_runtime(){
-    #pragma omp parallel for shared(array) schedule(runtime)
+    array->FillVector();
+    #pragma omp parallel for schedule(runtime)
       for(int i = 0; i < Tam; i++){
         array->Add_char('A' + omp_get_thread_num(), i);
       }
 
   }
   void sch_auto(){
-    #pragma omp parallel for shared(array) schedule(auto)
+    array->FillVector();
+    #pragma omp parallel for schedule(auto)
       for(int i = 0; i < Tam; i++){
         array->Add_char('A' + omp_get_thread_num(), i);
       }
   }
   void no_exclusion(){
+    array->FillVector();
     int i;
-    #pragma omp parallel
-      for(i = 0; i < Tam; i++){
+    #pragma omp parallel shared(i)
+      for(i = 0; i < Tam;){
         array->Add_char('A' + omp_get_thread_num(), i);
+        spendSomeTime();
+        i++;
+        spendSomeTime();
       }
   }
 };

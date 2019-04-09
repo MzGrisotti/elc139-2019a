@@ -1,0 +1,39 @@
+Digite o número de Threads: 2
+Digite o Tamanho do Vetor: 20
+
+Schedule (static) with Chunk
+AAAAABBBBBAAAAABBBBB
+A: 10 B: 10 
+
+Schedule (static) without Chunk
+AAAAAAAAAABBBBBBBBBB
+A: 10 B: 10 
+
+Schedule (dynamic) with Chunk
+BBBBBBBBBBBBABBBBABA
+A: 3 B: 17 
+
+Schedule (dynamic) without Chunk
+BBBBABABBABBABAABBAB
+A: 7 B: 13 
+
+Schedule (guided) with Chunk
+BBBBBBBBBBAAAAABBBBB
+A: 5 B: 15 
+
+Schedule (guided) without Chunk
+BBBBBBBBBBBBBBBAAABA
+A: 4 B: 16 
+
+Schedule (runtime)
+BBBBBBABABBAABBAABAB
+A: 7 B: 13 
+
+Schedule (auto)
+AAAAAAAAAABBBBBBBBBB
+A: 10 B: 10 
+
+No exclusion
+A-B-B-B-B-B-B-B-A-A-
+A: 3 B: 7 
+
