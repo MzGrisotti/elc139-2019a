@@ -13,15 +13,19 @@
 
  - Schedule `static`, com especificação do `chunk`:
 
- `Schedule (static) with Chunk
- AAAABBBBCCCCDDDDAAAABBBBCCCCDDDDAAAABBBB
- A: 12 B: 12 C: 8 D: 8`
+```
+Schedule (static) with Chunk
+AAAABBBBCCCCDDDDAAAABBBBCCCCDDDDAAAABBBB
+A: 12 B: 12 C: 8 D: 8
+```
 
   - Schedule `static`, sem especificação do `chunk`:
 
- `Schedule (static) without Chunk
- AAAAAAAAAABBBBBBBBBBCCCCCCCCCCDDDDDDDDDD
- A: 10 B: 10 C: 10 D: 10`
+```
+Schedule (static) without Chunk
+AAAAAAAAAABBBBBBBBBBCCCCCCCCCCDDDDDDDDDD
+A: 10 B: 10 C: 10 D: 10
+```
 
  Com `static` a divisão é feita nos índices do for antes de iniciar as repetições, a diferença entre usar chunk é que ao invés de um intervalo contínuo, cada thread pode pegar vários intervalos separados do for.
 
@@ -29,9 +33,9 @@
 
 ```
 Schedule (dynamic) with Chunk
- ACDBBACDBACDBADCBDCADCBDACDBCABCCDABCDBD
- A: 8 B: 10 C: 11 D: 11
- ```
+ACDBBACDBACDBADCBDCADCBDACDBCABCCDABCDBD
+A: 8 B: 10 C: 11 D: 11
+```
 
  - Schedule `dynamic`, sem especificação do `chunk`:
 
