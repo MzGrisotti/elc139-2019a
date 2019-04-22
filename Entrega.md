@@ -5,9 +5,10 @@
 
 **Nome:** Matheus Zorzo Grisotti
 
-**Programa**: [Programa](/trabalhos/t3/OpenMPDemoABC.cpp)
+**Programa**: [Programa 1](/trabalhos/t4/fractalOpenMP/fractalpar1.cpp)
+              [Programa 2](/trabalhos/t4/fractalOpenMP/fractalpar2.cpp)
 
-**Resultados**: [Results](/trabalhos/t3/Output)
+**Resultados**: [Results](/trabalhos/t4/fractalOpenMP/Output)
 
 
   ## Referências
