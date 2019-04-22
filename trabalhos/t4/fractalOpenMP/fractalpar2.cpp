@@ -31,7 +31,7 @@ static const double yMid =  0.521;
 
 int main(int argc, char *argv[])
 {
-  printf("Fractal v1.6 [serial]\n");
+  //printf("Fractal v1.6 [serial]\n");
 
   // check command line
   if (argc != 5) {fprintf(stderr, "usage: %s [frame_width] [num_frames] [1 or 0 to write] [n_threads]\n", argv[0]); exit(-1);}
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
   if (frames < 1) {fprintf(stderr, "error: num_frames must be at least 1\n"); exit(-1);}
   int write = atoi(argv[3]);
   int n_threads = atoi(argv[4]);
-  printf("computing %d frames of %d by %d fractal with %d threads\n", frames, width, width, n_threads);
+  //printf("computing %d frames of %d by %d fractal with %d threads\n", frames, width, width, n_threads);
 
   omp_set_num_threads(n_threads); //seta o numero de threads de acordo com o argumento
   // allocate picture array
@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
       const double xMin = xMid - delta;
       const double yMin = yMid - delta;
       const double dw = 2.0 * delta / width;
-      #pragma omp parallel for schedule(dynamic, width/50)
+      #pragma omp parallel for schedule(dynamic)
       for (int row = 0; row < width; row++) {
         const double cy = yMin + row * dw;
         for (int col = 0; col < width; col++) {
@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
   // end time
   gettimeofday(&end, NULL);
   double runtime = end.tv_sec + end.tv_usec / 1000000.0 - start.tv_sec - start.tv_usec / 1000000.0;
-  printf("compute time: %.4f s\n", runtime);
+  printf("%.4f\n", runtime);
 
   // verify result by writing frames to BMP files
   if (write != 0) {

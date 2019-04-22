@@ -1,4 +1,25 @@
 #!/bin/bash
 clear
-seq 20 | xargs -Iz ./fractalpar1 512 10 0 1 > Output/fractalpar1/512w_10f_1t.txt
+echo "fractalpart1"
+echo "1 thread"
+seq 20 | xargs -Iz ./fractalpar1 $1 $2 0 1 > Output/fractalpar1/$1w_$2f_1t.txt
+echo "2 thread"
+seq 20 | xargs -Iz ./fractalpar1 $1 $2 0 2 > Output/fractalpar1/$1w_$2f_2t.txt
+echo "4 thread"
+seq 20 | xargs -Iz ./fractalpar1 $1 $2 0 4 > Output/fractalpar1/$1w_$2f_4t.txt
+echo "8 thread"
+seq 20 | xargs -Iz ./fractalpar1 $1 $2 0 8 > Output/fractalpar1/$1w_$2f_8t.txt
+
+echo "fractalpart2"
+echo "1 thread"
+seq 20 | xargs -Iz ./fractalpar2 $1 $2 0 1 > Output/fractalpar2/$1w_$2f_1t.txt
+echo "2 thread"
+seq 20 | xargs -Iz ./fractalpar2 $1 $2 0 2 > Output/fractalpar2/$1w_$2f_2t.txt
+echo "4 thread"
+seq 20 | xargs -Iz ./fractalpar2 $1 $2 0 4 > Output/fractalpar2/$1w_$2f_4t.txt
+echo "8 thread"
+seq 20 | xargs -Iz ./fractalpar2 $1 $2 0 8 > Output/fractalpar2/$1w_$2f_8t.txt
+
+
+
 
