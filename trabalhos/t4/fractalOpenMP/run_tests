@@ -1,0 +1,4 @@
+#!/bin/bash
+clear
+seq 20 | xargs -Iz ./fractalpar1 512 10 0 1 > Output/fractalpar1/512w_10f_1t.txt
+

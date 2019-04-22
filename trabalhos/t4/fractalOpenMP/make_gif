@@ -1,0 +1,38 @@
+#!/bin/bash
+clear
+g++ -fopenmp fractalpar1.cpp -o fractalpar1
+g++ -fopenmp fractalpar2.cpp -o fractalpar2
+
+./fractalpar1 512 30 1 1
+convert -delay 1x10 fractal1*.bmp fractal.gif
+
+mv fractal.gif gifs/
+
+rm -f fractal1*.bmp
+rm -f fractal.gif
+
+./fractalpar1 512 30 1 2
+convert -delay 1x10 fractal1*.bmp fractal.gif
+
+mv fractal.gif gifs/fractal_2thread.gif
+
+rm -f fractal1*.bmp
+rm -f fractal.gif
+
+./fractalpar1 512 30 1 4
+convert -delay 1x10 fractal1*.bmp fractal.gif
+
+mv fractal.gif gifs/fractal_4thread.gif
+
+rm -f fractal1*.bmp
+rm -f fractal.gif
+
+./fractalpar1 512 30 1 8
+convert -delay 1x10 fractal1*.bmp fractal.gif
+
+mv fractal.gif gifs/fractal_8thread.gif
+
+rm -f fractal1*.bmp
+rm -f fractal.gif
+
+
