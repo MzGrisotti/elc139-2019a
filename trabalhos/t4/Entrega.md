@@ -9,7 +9,7 @@
 
 **Resultados**: [Results](/trabalhos/t4/fractalOpenMP/Output/)
 
-**Slides**: [Slides](/trabalhos/t4/Estudo%20de%20caso.pdf) Com os detalhes de análise, implementação e solução do problema.
+**Slides**: [Slides](/trabalhos/t4/Estudo%20de%20caso.pdf). Detalhamento da análise, implementação e solução do problema.
 
   ## Referências
 
