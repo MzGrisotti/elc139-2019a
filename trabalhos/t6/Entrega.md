@@ -45,8 +45,11 @@ MPI_Gather (C[from], SIZE*SIZE/nproc, MPI_INT, C, SIZE*SIZE/nproc, MPI_INT, 0, M
 ### Parte 2
 
 O artigo começa contextualizando o leitor sobre o que é o MPI e mostrando que mesmo tendo sido popular no início, mas para uso de otimização para manter uma performance alta, o uso de send e receive não é indicado, devido a sua dificuldade de programação e previsão do comportamento do programa para problemas mais complexos. A alternativa apresentada são as operações coletivas.
-Então foi feitas algumas hipóteses, é simples de programar? Garante o mesmo desempenho? É mais previsível? Como foi observado na execução deste trabalho, foi possível substituir algumas linhas de código que faziam o broadcast entre processos, por simples 2 linhas, fato também demonstrado no artigo. O desempenho é outro ponto atacado pelo autor, e ele demostra que não é possível concluir que exista uma perda no desempenho por usar operações coletivas.
+
+Então foram feitas algumas hipóteses, é simples de programar? Garante o mesmo desempenho? É mais previsível? Como foi observado na execução deste trabalho, foi possível substituir algumas linhas de código que faziam o broadcast entre processos, por simples 2 linhas, fato também demonstrado no artigo. O desempenho é outro ponto atacado pelo autor, e ele demostra que não é possível concluir que exista uma perda no desempenho por usar operações coletivas.
+
 Outro ponto positivo sobre as operações coletivas demonstrado no artigo é de que o comportamento dos programas são mais previsĩveis e possuem o mesmo poder de expressão(demonstrado algumas aplicações que segundo a literatura foram feitas apenas com operações coletivas) que as primitivas send-receive.
+
 Foi concluido então por meio deste artigo as vantagens das operações coletivas sobre as primitivas em cinco grandes àreas: simplicidade, expressividade, previsibilidade, desempenho e progamabilidade, não deixando dúvidas que as suposições negativas sobre estes métodos eram meros mítos e não existe motivo para não os usá-los.
 
   ## Referências
