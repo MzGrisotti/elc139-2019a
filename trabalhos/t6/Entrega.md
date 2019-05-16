@@ -48,7 +48,7 @@ O artigo começa contextualizando o leitor sobre o que é o MPI e mostrando que 
 
 Então foram feitas algumas hipóteses, é simples de programar? Garante o mesmo desempenho? É mais previsível? Como foi observado na execução deste trabalho, foi possível substituir algumas linhas de código que faziam o broadcast entre processos, por simples 2 linhas, fato também demonstrado no artigo. O desempenho é outro ponto atacado pelo autor, e ele demostra que não é possível concluir que exista uma perda no desempenho por usar operações coletivas.
 
-Outro ponto positivo sobre as operações coletivas demonstrado no artigo é de que o comportamento dos programas são mais previsĩveis e possuem o mesmo poder de expressão(demonstrado algumas aplicações que segundo a literatura foram feitas apenas com operações coletivas) que as primitivas send-receive.
+Outro ponto positivo sobre as operações coletivas demonstrado no artigo é de que o comportamento dos programas são mais previsíveis e possuem o mesmo poder de expressão(demonstrado algumas aplicações que segundo a literatura foram feitas apenas com operações coletivas) que as primitivas send-receive.
 
 Foi concluido então por meio deste artigo as vantagens das operações coletivas sobre as primitivas em cinco grandes àreas: simplicidade, expressividade, previsibilidade, desempenho e progamabilidade, não deixando dúvidas que as suposições negativas sobre estes métodos eram meros mítos e não existe motivo para não os usá-los.
 
