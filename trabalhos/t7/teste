@@ -1,0 +1,12 @@
+#!/bin/bash
+clear
+
+seq 20 | xargs -Iz smpirun -np 5000 -hostfile cluster_hostfile.txt -platform cluster_crossbar.xml ./sr_bcast_timed --cfg=smpi/host-speed:10000000 > Output/sr_bcast.txt
+
+seq 20 | xargs -Iz smpirun -np 5000 -hostfile cluster_hostfile.txt -platform cluster_crossbar.xml ./mpi_bcast --cfg=smpi/host-speed:10000000 > Output/mpi_bcast.txt
+
+
+
+
+
+
