@@ -13,7 +13,7 @@
   O programa com o cálculo de tempo pode ser visto [aqui](/trabalhos/t7/sr_bcast_timed.c).
   Apartir disso o seguinte gráfico foi gerado, onde podemos ver que o broadcast com send e recieve teve um desempenho melhor.
   
-  ![Speedup](/trabalhos/t7/Tempo BroadCast nativo e com send-Recieve (segundos).png)
+  ![Tempo](/trabalhos/t7/Tempo%20BroadCast%20nativo%20e%20com%20send-Recieve%20(segundos).png)
 
 ### Parte 2
 
