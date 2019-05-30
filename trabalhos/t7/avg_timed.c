@@ -85,11 +85,11 @@ int main(int argc, char** argv) {
     float avg = compute_avg(sub_avgs, world_size);
     //end_time_mpi = MPI_Wtime();
     //printf("%f\n", (end_time_mpi - start_time_mpi)*1000);
-     printf("Avg of all elements is %f\n", avg);
+     //printf("Avg of all elements is %f\n", avg);
     // Compute the average across the original data for comparison
     float original_data_avg =
       compute_avg(rand_nums, num_elements_per_proc * world_size);
-     printf("Avg computed across original data is %f\n", original_data_avg);
+     //printf("Avg computed across original data is %f\n", original_data_avg);
   }
 
   // Clean up

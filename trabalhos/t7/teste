@@ -1,5 +1,5 @@
 #!/bin/bash
 clear
 
-seq 20 | xargs -Iz smpirun -np 32 -hostfile cluster_hostfile.txt -platform cluster_crossbar.xml ./avg_timed 200 --cfg=smpi/host-speed:10000000
+seq 20 | xargs -Iz smpirun -np 32 -hostfile cluster_hostfile.txt -platform cluster_crossbar.xml ./avg_timed 300 --cfg=smpi/host-speed:10000000 > Output/300v25mbps25us.txt
 
