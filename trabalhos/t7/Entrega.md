@@ -21,6 +21,8 @@
 ![Tempo2](/trabalhos/t7/200.png)
 ![Tempo3](/trabalhos/t7/300.png)
 
+Como podemos ver, foram executadas runs com diferentes tamanhos de vetor, banda, e latência. Os vetores influenciaram no tempo como o previsto, dobrando o tamanho, o tempo dobra, e assim por diante, variando linearmente conforme o tamanho. A banda e a latência eu decidi pior em um fator de 5 vezes, dividindo em 5 vezes a banda e aumentando em 5 vezes a latência, e conforme mostra o gráfico, a banda teve o maior impacto, piorando quase que no mesmo grau quanto a divisão de banda. Ainda foi feito um teste com a junção dois dois, piorando a banda e a latência, e assim pudemos concluir mais uma vez que a latência(nesse caso), não teve um inpacto muito grande.
+
 ## Referências
 
 - [MPI: A Message-Passing Interface Standard](https://www.mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf)  
