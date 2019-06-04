@@ -17,7 +17,9 @@
 
 ### Parte 2
 
-
+![Tempo1](/trabalhos/t7/100.png)
+![Tempo2](/trabalhos/t7/200.png)
+![Tempo3](/trabalhos/t7/300.png)
 
 ## Referências
 
