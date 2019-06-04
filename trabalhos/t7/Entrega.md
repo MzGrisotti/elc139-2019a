@@ -5,7 +5,9 @@
 
 **Nome:** Matheus Zorzo Grisotti
 
-**Programa**: [Programa](/trabalhos/t7/mpi_bcast.c)
+**Computador:** Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz (6Gflops) - 16GB RAM 
+
+**Programa**: [Programa 1](/trabalhos/t7/mpi_bcast.c)/[Programa 2](/trabalhos/t7/avg_timed.c)
 
 ### Parte 1
 
@@ -22,7 +24,8 @@
 ![Tempo3](/trabalhos/t7/300.png)
 
 Como podemos ver, foram executadas runs com diferentes tamanhos de vetor, banda, e latência. Os vetores influenciaram no tempo como o previsto, dobrando o tamanho, o tempo dobra, e assim por diante, variando linearmente conforme o tamanho. A banda e a latência eu decidi pior em um fator de 5 vezes, dividindo em 5 vezes a banda e aumentando em 5 vezes a latência, e conforme mostra o gráfico, a banda teve o maior impacto, piorando quase que no mesmo grau quanto a divisão de banda. Ainda foi feito um teste com a junção dois dois, piorando a banda e a latência, e assim pudemos concluir mais uma vez que a latência(nesse caso), não teve um inpacto muito grande.
-
+  OBS: Para capturar o tempo de execução foram usados o método já implementando no código [original](/trabalhos/t7/avg.c) e só descomentadas no [novo](/trabalhos/t7/avg_timed.c)
+  
 ## Referências
 
 - [MPI: A Message-Passing Interface Standard](https://www.mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf)  
