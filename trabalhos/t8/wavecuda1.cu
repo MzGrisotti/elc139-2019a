@@ -25,7 +25,7 @@ Revision history:
 #include <cstdlib>
 #include <sys/time.h>
 #include <math.h>
-#include "wave.h"
+//#include "wave.h"
 
 __global__ void make_wave(unsigned char* pic, int width,){
 
