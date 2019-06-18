@@ -5,7 +5,7 @@
 
 **Nome:** Matheus Zorzo Grisotti
 
-**Computador:** Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz (6Gflops) - 16GB RAM 
+**Computador:** ![Testa](/trabalhos/t8/tesla.png)
 
 **Programa**: [Programa 1](/trabalhos/t7/mpi_bcast.c)/[Programa 2](/trabalhos/t7/avg_timed.c)
 
