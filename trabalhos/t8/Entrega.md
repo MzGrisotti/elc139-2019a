@@ -15,3 +15,7 @@ A Legenda no Eixo X mostra os casos de teste na forma de Frames/Width. No caso d
 ![wave1](/trabalhos/t8/wave1.png)
 
 ### Parte 2
+
+## Referências
+
+- [CUDA C Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)  
