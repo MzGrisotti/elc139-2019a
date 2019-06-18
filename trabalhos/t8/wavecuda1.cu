@@ -23,8 +23,10 @@ Revision history:
 */
 
 #include <cstdlib>
+#include <stdio.h>
 #include <sys/time.h>
 #include <math.h>
+#include <cuda_runtime.h>
 //#include "wave.h"
 
 __global__ void make_wave(unsigned char* pic, int width,){
