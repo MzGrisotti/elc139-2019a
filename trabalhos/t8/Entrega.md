@@ -11,7 +11,7 @@
 
 ### Parte 1
 
-A Legenda no Eixo X mostra os casos de teste na forma de Frames/Width. No caso do programa 1, o número de frames é igual ao número de threads, então pode se observar que, como a gpu disponibiliza de 2500+ núcleos, o speedup vai aumentar ainda mais conforme aumenta o número de frames, até chegar no limite de threads disponíveis. O aumento do tempo ocorre de forma linear, dobrando a carga, dobrasse o tempo.
+A Legenda no Eixo X mostra os casos de teste na forma de Frames/Width. No caso do programa 1, o número de frames é igual ao número de threads, então pode se observar que, como a gpu disponibiliza de 2500+ núcleos, o speedup vai aumentar ainda mais conforme aumenta o número de frames, até chegar no limite de threads disponíveis. O aumento do tempo ocorre de forma linear, dobrando a carga, dobrasse o tempo. No caso do programa 1, foi designado 1 frame por thread da GPU.
 ![wave1](/trabalhos/t8/wave1.png)
 
 ### Parte 2
